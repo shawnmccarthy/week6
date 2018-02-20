@@ -11,14 +11,6 @@ var config = {
 
 app.use(passport.initialize());
 
-config.swaggerSecurityHandlers = {
-    basic: function securityHandler1(req, authOrSecDef, scopesOrApiKey, cb) {
-        // your security code
-
-        cb();
-    }
-};
-
 SwaggerExpress.create(config, function(err, swaggerExpress) {
   if (err) { throw err; }
 
